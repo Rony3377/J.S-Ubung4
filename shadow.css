@@ -1,0 +1,7 @@
+.drop-shadow-on {
+  filter: drop-shadow(0px 0px 8px gray);
+}
+
+.drop-shadow-off {
+  filter: drop-shadow(none);
+}

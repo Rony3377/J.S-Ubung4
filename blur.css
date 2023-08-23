@@ -1,0 +1,7 @@
+.blur-on {
+  filter: blur(2px);
+}
+
+.blur-off {
+  filter: blur(0px);
+}

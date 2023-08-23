@@ -1,0 +1,7 @@
+.grayscale-on {
+  filter: grayscale(1);
+}
+
+.grayscale-off {
+  filter: grayscale(0);
+}

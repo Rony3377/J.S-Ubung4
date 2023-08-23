@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <!-- ----------------------------------------- -- 
+    ---- CSS Dateien einbinden
+    ---- ----------------------------------------- -->
+    <link rel="stylesheet" href="greyscale.css" />
+    <link rel="stylesheet" href="shadow.css" />
+    <link rel="stylesheet" href="blur.css" />
+
+    <!---- CSS Formatierung
+    ---- ----------------------------------------- -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- header-Inhalt -->
+    <header>
+      <button onclick="effekt_grayscale(1)">greyscale on</button>
+      <button onclick="effekt_grayscale(2)">greyscale off</button>
+      <button onclick="effekt_shadow(1)">drop-shadow on</button>
+      <button onclick="effekt_shadow(2)">drop-shadow off</button>
+      <button onclick="effekt_blur(1)">blur on</button>
+      <button onclick="effekt_blur(2)">blur off</button>
+    </header>
+    <!-- main-Inhalt -->
+    <main>
+      <div id="ebene-blur">
+        <div id="ebene-shadow">
+          <img
+            id="ebene-grayscale"
+            src="https://th.bing.com/th/id/R.7cb4d67b982bf6307d7f5b87983c5542?rik=w9DY%2fbVC16kgyA&riu=http%3a%2f%2fs1.1zoom.me%2fbig0%2f862%2f272147-frederika.jpg&ehk=swTrpWRFZUu2wjKC1WQhpGi3wdBjpVEB2Hl5XsGycaw%3d&risl=&pid=ImgRaw&r=0"
+            alt="Bild"
+          />
+        </div>
+      </div>
+    </main>
+    <!-- Javascript-Code -->
+    <script>
+      function effekt_grayscale(schalter) {
+        /* Verbindungsaufbau */
+
+        const e = document.getElementById(
+          "ebene-grayscale"
+        ); /* Prüfen, ob die Verbindung gelungen ist */
+
+        if (schalter == 1) {
+          /* Einschalten */
+          e.classList.remove("grayscale-off");
+          e.classList.add("grayscale-on");
+        } else if (schalter == 2) {
+          /* Ausschalten */
+          e.classList.add("grayscale-off");
+          e.classList.remove("grayscale-on");
+        }
+      }
+
+      function effekt_shadow(schalter) {
+        /* Verbindungsaufbau */
+
+        const e = document.getElementById(
+          "ebene-shadow"
+        ); /* Prüfen, ob die Verbindung gelungen ist */
+
+        if (schalter == 1) {
+          /* Einschalten */
+          e.classList.remove("drop-shadow-off");
+          e.classList.add("drop-shadow-on");
+        } else if (schalter == 2) {
+          /* Ausschalten */
+          e.classList.add("drop-shadow-off");
+          e.classList.remove("drop-shadow-on");
+        }
+      }
+
+      function effekt_blur(schalter) {
+        /* Verbindungsaufbau */
+
+        const e = document.getElementById(
+          "ebene-blur"
+        ); /* Prüfen, ob die Verbindung gelungen ist */
+
+        if (schalter == 1) {
+          /* Einschalten */
+          e.classList.remove("blur-off");
+          e.classList.add("blur-on");
+        } else if (schalter == 2) {
+          /* Ausschalten */
+          e.classList.add("blur-off");
+          e.classList.remove("blur-on");
+        }
+      }
+    </script>
+  </body>
+</html>
